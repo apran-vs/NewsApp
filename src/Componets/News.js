@@ -2,229 +2,39 @@ import React, { Component } from "react";
 import NewsItem from "./NewsItem";
 
 export class News extends Component {
-  article = [
-    {
-      "source": { "id": null, "name": "Mychamplainvalley.com" },
-      "author": "Addy Bink, Nexstar Media Wire",
-      "title": "Neil Young's music pulled from Spotify after ‘Rogan or Young' comments - Local 22/44 News",
-      "description": "Neil Young's music is off of Spotify, two days after he penned a letter to his management team and record label. He says the streaming service has been spreading “vaccine misinformation.”",
-      "url": "https://www.mychamplainvalley.com/news/neil-youngs-music-pulled-from-spotify-after-rogan-or-young-comments/",
-      "urlToImage": "https://www.mychamplainvalley.com/wp-content/uploads/sites/61/2022/01/AP22025559380179.jpg?w=1280",
-      "publishedAt": "2022-01-27T13:51:20Z",
-      "content": "(NEXSTAR) – Neil Young's music is coming off of Spotify after the singer penned an open letter saying the streaming service could have Joe Rogan's podcast or his music, “not both.”\r\nOn Monday, Young … [+1852 chars]"
-    },
-    {
-      "source": { "id": null, "name": "CNBC" },
-      "author": "Jeff Cox",
-      "title": "GDP grew at a 6.9% pace to close out 2021, stronger than expected despite omicron spread - CNBC",
-      "description": "Gross domestic product accelerated at a 6.9% annualized pace in the fourth quarter, well ahead of the 5.5% estimate.",
-      "url": "https://www.cnbc.com/2022/01/27/gdp-grew-at-a-6point9percent-pace-to-close-out-2021-stronger-than-expected-despite-omicron-spread.html",
-      "urlToImage": "https://image.cnbcfm.com/api/v1/image/106982816-1638364496257-gettyimages-1356480984-cg6a3902_2021113052001580.jpeg?v=1638831720",
-      "publishedAt": "2022-01-27T13:30:51Z",
-      "content": "The U.S. economy grew at a much better-than-expected pace to end 2021 from sizeable boosts in inventories and consumer spending, and despite signs that the acceleration likely tailed off toward the e… [+3772 chars]"
-    },
-    {
-      "source": { "id": "cnn", "name": "CNN" },
-      "author": "Danielle Wiener-Bronner, CNN Business",
-      "title": "McDonald's sales haven't been this good since Bill Clinton was president - CNN",
-      "description": "Higher prices and chicken sandwiches are helping boost McDonald's sales. But earnings disappointed Wall Street Thursday morning.",
-      "url": "https://www.cnn.com/2022/01/27/business/mcdonalds-earnings/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220126165919-mcdonalds-crispy-chicken-sandwich-file-restricted-super-tease.jpg",
-      "publishedAt": "2022-01-27T13:26:00Z",
-      "content": null
-    },
-    {
-      "source": { "id": null, "name": "Investor's Business Daily" },
-      "author": "Investor's Business Daily",
-      "title": "Fed Meeting Fallout: Stock Market Pressured As Wall Street Braces For 3 Rate Hikes — By June - Investor's Business Daily",
-      "description": "The Federal Reserve will end asset purchases in early March and expects to hike its key interest rate soon.",
-      "url": "https://www.investors.com/news/economy/fed-meeting-signals-march-rate-hike-as-asset-purchases-end-stock-market-rallies/",
-      "urlToImage": "https://www.investors.com/wp-content/uploads/2019/01/stock-FederalReserve-snow-11-shutter.jpg",
-      "publishedAt": "2022-01-27T13:25:00Z",
-      "content": "The Federal Reserve on Wednesday said it will finish winding down crisis-driven asset purchases before its mid-March meeting, likely just in time for the first rate hike of the cycle. The 2 p.m. ET p… [+5596 chars]"
-    },
-    {
-      "source": { "id": null, "name": "BBC News" },
-      "author": "https://www.facebook.com/bbcnews",
-      "title": "Ukraine crisis: Nord Stream 2 pipeline could be axed - BBC News",
-      "description": "Germany and the US threaten the future of the Nord Stream 2 gas pipeline if Russia invades Ukraine.",
-      "url": "https://www.bbc.com/news/world-europe-60151839",
-      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1313E/production/_123024187_gettyimages-1237977527.jpg",
-      "publishedAt": "2022-01-27T12:41:59Z",
-      "content": "Image source, Getty Images\r\nImage caption, Ukrainian soldiers are facing some 100,000 Russian soldiers massed on their borders\r\nGermany and the US have warned they could target a key Russian gas pipe… [+4977 chars]"
-    },
-    {
-      "source": { "id": null, "name": "New York Times" },
-      "author": "Michael Barbaro, Michael Simon Johnson, Eric Krupke, Clare Toeniskoetter, Lisa Chow, Paige Cowett, Dan Powell, Corey Schreppel",
-      "title": "Biden Gets a Supreme Court Pick - The New York Times",
-      "description": "Why Justice Stephen Breyer is retiring now, and how President Biden is likely to go about choosing his successor.",
-      "url": "https://www.nytimes.com/2022/01/27/podcasts/the-daily/stephen-breyer-retires-supreme-court-joe-biden.html",
-      "urlToImage": "https://static01.nyt.com/images/2021/08/30/podcasts/27daily-1/27DAILY-breyer-audio-app-facebookJumbo.jpg",
-      "publishedAt": "2022-01-27T12:38:56Z",
-      "content": "Adam Liptak contributed reporting.\r\nThe Daily is made by Lisa Tobin, Rachel Quester, Lynsea Garrison, Clare Toeniskoetter, Paige Cowett, Michael Simon Johnson, Brad Fisher, Larissa Anderson, Chris Wo… [+757 chars]"
-    },
-    {
-      "source": { "id": "fox-news", "name": "Fox News" },
-      "author": "Ryan Gaydos",
-      "title": "Broncos to hire Nathaniel Hackett as next head coach: report - Fox News",
-      "description": "The Denver Broncos will hire Green Bay Packers offensive coordinator Nathaniel Hackett to be their new head coach, replacing Vic Fangio.",
-      "url": "https://www.foxnews.com/sports/broncos-hire-nathaniel-hackett-head-coach",
-      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2022/01/Nathaniel-Hackett.jpg",
-      "publishedAt": "2022-01-27T12:28:21Z",
-      "content": "The Denver Broncos reportedly decided who their new head coach will be.\r\nThe Broncos are set to hire Green Bay Packers offensive coordinator Nathaniel Hackett as their next head coach, replacing Vic … [+2109 chars]"
-    },
-    {
-      "source": { "id": "cnn", "name": "CNN" },
-      "author": "Sandra Gonzalez, CNN",
-      "title": "'Jeopardy!' champ's impressive winning streak ends - CNN",
-      "description": "It's game over for \"Jeopardy!\" champ Amy Schneider, but she has more than 1.3 million reasons to be grateful for her impressive run.",
-      "url": "https://www.cnn.com/2022/01/26/entertainment/jeopardy-amy-schneider/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220126171744-amy-schneider-jeopardy-super-tease.jpg",
-      "publishedAt": "2022-01-27T12:26:00Z",
-      "content": "(CNN)It's game over for \"Jeopardy!\" champ Amy Schneider, but she has more than 1.3 million reasons to be grateful for her impressive run. \r\nSchneider, an engineering manager from Oakland, California,… [+1338 chars]"
-    },
-    {
-      "source": { "id": "ign", "name": "IGN" },
-      "author": "Adele Ankers",
-      "title": "Astronomers Puzzle Over 'Spooky' Space Object Beaming Out Radio Signals - IGN - IGN",
-      "description": "Scientists have spotted a \"spooky\" celestial object blasting out radio signals, three times an hour, about 4,000 light-years away from Earth.",
-      "url": "https://www.ign.com/articles/spooky-space-object-beaming-out-radio-signals-puzzles-astronomers",
-      "urlToImage": "https://assets-prd.ignimgs.com/2022/01/27/space-object-radio-signals-1643280053182.jpg?width=1280",
-      "publishedAt": "2022-01-27T12:23:28Z",
-      "content": "Scientists have spotted a \"spooky\" celestial object blasting out radio signals, three times an hour, about 4,000 light-years away from Earth.\r\nCNN reported on a new study, published in the journal Na… [+2867 chars]"
-    },
-    {
-      "source": { "id": null, "name": "New York Post" },
-      "author": "Yaron Steinbuch",
-      "title": "Man removed from heart transplant list for being unvaccinated gets emergency pump - New York Post ",
-      "description": "The 31-year-old father who was removed from the heart transplant list at a Boston hospital because he refuses to get the COVID-19 vaccine has undergone emergency surgery to be fitted with a mechani…",
-      "url": "https://nypost.com/2022/01/27/man-removed-from-heart-transplant-list-for-being-unvaccinated-gets-emergency-pump/",
-      "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2022/01/heart-transplant-covid-vaccine-comp-1.jpg?quality=90&strip=all&w=1024",
-      "publishedAt": "2022-01-27T12:11:00Z",
-      "content": "The 31-year-old father who was removed from the heart transplant list at a Boston hospital because he refuses to get the COVID-19 vaccine has undergone emergency surgery to be fitted with a mechanica… [+4567 chars]"
-    },
-    {
-      "source": { "id": "cnn", "name": "CNN" },
-      "author": "Ben Church, CNN",
-      "title": "Ashleigh Barty thrashes Madison Keys to race into Australian Open final - CNN",
-      "description": "There seems to be no stopping Ashleigh Barty at the moment.",
-      "url": "https://www.cnn.com/2022/01/27/tennis/ashleigh-barty-australian-open-semfinal-win-spt-intl/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220127093430-barty-tease-super-tease.jpg",
-      "publishedAt": "2022-01-27T11:56:00Z",
-      "content": null
-    },
-    {
-      "source": { "id": null, "name": "CNBC" },
-      "author": "Holly Ellyatt",
-      "title": "Kremlin offers frosty response to Blinken letter as world waits for Putin's next move - CNBC",
-      "description": "The Kremlin has given its response to U.S. security proposals that were hand-delivered to Moscow on Wednesday, saying it believes Russian views had not been taken into account.",
-      "url": "https://www.cnbc.com/2022/01/27/kremlin-responds-to-blinken-letter-as-putins-next-step-is-watched.html",
-      "urlToImage": "https://image.cnbcfm.com/api/v1/image/106985377-1643291664748-106985377-1638863978789-gettyimages-1236037927-RUS_Russian_President_Vladimir_Putin_Meets_Valdia_Discussion_Club_During_Annual_Meeting.jpg?v=1643291686",
-      "publishedAt": "2022-01-27T11:40:35Z",
-      "content": "Russian President Vladimir Putin speeches during the Valdai Discussion Club's plenary meeting, on October,21,2021, in Sochi, Russia.\r\nThe Kremlin has given its response to U.S. security proposals tha… [+7650 chars]"
-    },
-    {
-      "source": { "id": "usa-today", "name": "USA Today" },
-      "author": "Ryan W. Miller, USA TODAY",
-      "title": "Her family saved him during the Holocaust. Years later, a chance encounter led to love. - USA TODAY",
-      "description": "In 1942, a family helped hide a Jewish prisoner of war to save him from the Nazis. On International Holocaust Remembrance Day, they share their story.",
-      "url": "https://www.usatoday.com/story/news/world/2022/01/27/international-holocaust-remembrance-day-story-survival-marriage-ukraine/6634388001/",
-      "urlToImage": "https://www.gannett-cdn.com/presto/2022/01/25/USAT/6fb49798-39cc-40d3-afe4-4663d4d4e560-split_copy.jpg?auto=webp&crop=799,450,x0,y24&format=pjpg&width=1200",
-      "publishedAt": "2022-01-27T11:20:55Z",
-      "content": "Isaak Tartakovsky was at the post office in Ukraine in 1953 when he spotted a woman he immediately recognized.\r\nHer name was Lidiya Savchuk, and her family had saved his life in German-occupied Ukrai… [+5529 chars]"
-    },
-    {
-      "source": { "id": "cnn", "name": "CNN" },
-      "author": "Tara John, Paul P. Murphy and Allegra Goodwin, CNN",
-      "title": "Justice Department charges a man who allegedly sold a gun to the Texas synagogue hostage-taker - CNN",
-      "description": "Federal prosecutors have charged a 32-year-old man with a federal firearm crime, alleging he sold the Colleyville, Texas, synagogue hostage-taker the gun he used during this month's 11-long standoff.",
-      "url": "https://www.cnn.com/2022/01/26/uk/texas-synagogue-uk-arrests-intl-gbr/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220126110945-texas-synagogue-uk-arrests-intl-gbr-file-011622-super-tease.jpg",
-      "publishedAt": "2022-01-27T11:16:00Z",
-      "content": "(CNN)Federal prosecutors have charged a 32-year-old man with a federal firearm crime, alleging he sold the Colleyville, Texas, synagogue hostage-taker the gun he used during this month's 11-long stan… [+4254 chars]"
-    },
-    {
-      "source": { "id": "techradar", "name": "TechRadar" },
-      "author": "James Rogerson",
-      "title": "Every single Samsung Galaxy S22 detail has leaked - TechRadar",
-      "description": "Specs, images, prices and more",
-      "url": "https://www.techradar.com/news/every-single-samsung-galaxy-s22-detail-has-leaked",
-      "urlToImage": "https://cdn.mos.cms.futurecdn.net/SWNAsNpxESC54MoWFfb2bf-1200-80.jpg",
-      "publishedAt": "2022-01-27T10:16:24Z",
-      "content": "There wasn't much about the Samsung Galaxy S22 range that we didn't have a good idea about at this point, and now there's even less, as a huge leak has revealed just about every detail of these phone… [+4138 chars]"
-    },
-    {
-      "source": { "id": "reuters", "name": "Reuters" },
-      "author": null,
-      "title": "Explainer: What are NATO's next steps if Russia invades Ukraine? - Reuters",
-      "description": "NATO allies are putting forces on <a href=\"https://www.reuters.com/world/europe/nato-sends-ships-jets-eastern-europe-ukraine-crisis-2022-01-24\" target=\"_blank\">standby</a> and sending reinforcements to eastern Europe in response to Russia's buildup of more th…",
-      "url": "https://www.reuters.com/world/europe/what-are-natos-next-steps-if-russia-invades-ukraine-2022-01-27/",
-      "urlToImage": "https://www.reuters.com/resizer/i_Rmq8z3gGlttvEKAa1FaDniilI=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/UGH7HO2HRBMWVLTOSP3L7ECUFA.jpg",
-      "publishedAt": "2022-01-27T10:07:00Z",
-      "content": "BRUSSELS, Jan 27 (Reuters) - NATO allies are putting forces on standby and sending reinforcements to eastern Europe in response to Russia's buildup of more than 100,000 troops on Ukraine's borders.\r\n… [+4298 chars]"
-    },
-    {
-      "source": { "id": null, "name": "New York Times" },
-      "author": "J. David Goodman",
-      "title": "Cases Dismissed, Judges Replaced: Texas Struggles to Prosecute Migrants - The New York Times",
-      "description": "More than 2,500 migrants have been arrested on trespassing charges under a program created last year by Gov. Greg Abbott. About 900 are still being held in state prisons.",
-      "url": "https://www.nytimes.com/2022/01/27/us/texas-migrants-operation-lone-star.html",
-      "urlToImage": "https://static01.nyt.com/images/2022/01/26/us/00texas-judges-1/00texas-judges-1-facebookJumbo.jpg",
-      "publishedAt": "2022-01-27T10:00:16Z",
-      "content": "We suffered a lot, Mr. Rodriguez said in a video interview, describing his experience in a Texas state prison repurposed to hold migrants: poor food, insults from guards, 3 a.m. wake-ups and days on … [+731 chars]"
-    },
-    {
-      "source": { "id": null, "name": "Yahoo Entertainment" },
-      "author": "SAMUEL PETREQUIN",
-      "title": "World remembers Holocaust as antisemitism rises in pandemic - Yahoo News",
-      "description": "Holocaust survivors and politicians warned about the resurgence of antisemitism and Holocaust denial as the world remembered Nazi atrocities and commemorated...",
-      "url": "https://news.yahoo.com/eu-honors-camp-survivor-world-090359632.html",
-      "urlToImage": "https://s.yimg.com/ny/api/res/1.2/XSdPptN7uzoSzlCmq6ygLA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03NTk-/https://s.yimg.com/uu/api/res/1.2/3_7.BweuOhkbvGZPJYyC6A--~B/aD01MzkwO3c9ODUyNDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/ap.org/35db4496fccd611c56240fdb9bd6583f",
-      "publishedAt": "2022-01-27T09:03:59Z",
-      "content": "BRUSSELS (AP) Holocaust survivors and politicians warned about the resurgence of antisemitism and Holocaust denial as the world remembered Nazi atrocities and commemorated the 77th anniversary of the… [+5854 chars]"
-    },
-    {
-      "source": { "id": "cnn", "name": "CNN" },
-      "author": "Aya Elamroussi, CNN",
-      "title": "Northeast faces heavy snow and blizzard conditions this weekend, but models are still unclear on how bad it will be - CNN",
-      "description": "Heavy snow and strong winds are expected to slam some metro areas in the Northeast where about five million people are planned to be under winter storm watches.",
-      "url": "https://www.cnn.com/2022/01/27/weather/noreaster-bomb-cyclone-storm-thursday/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220126083801-weather-snow-forecast-card-20220126-super-tease.jpg",
-      "publishedAt": "2022-01-27T08:45:00Z",
-      "content": "Why limited details regarding the potential #winter storm Sat? Well, the average model error at this time range (3 days out) is over 150 miles! For example, where will the rain/#snow line setup? 150 … [+146 chars]"
-    },
-    {
-      "source": { "id": null, "name": "TMZ" },
-      "author": "TMZ Staff",
-      "title": "Dylan Postl Condemns Peter Dinklage's Criticism of 'Snow White and 7 Dwarfs' Remake - TMZ",
-      "description": "Dylan Postl is NOT here for Peter Dinklage's hot take on the \"Snow White and the Seven Dwarfs\" remake.",
-      "url": "https://www.tmz.com/2022/01/27/dylan-postl-condemns-peter-dinklage-criticism-snow-white-7-dwarfs/",
-      "urlToImage": "https://imagez.tmz.com/image/82/16by9/2022/01/26/82df87fabfc1456986d266b620854afd_xl.jpg",
-      "publishedAt": "2022-01-27T08:40:00Z",
-      "content": "Dylan Postl is NOT here for Peter Dinklage's hot take on the \"Snow White and the Seven Dwarfs\" remake. Dylan says that the esteemed actor took things waaay too far... and as a result, he's actually h… [+1576 chars]"
-    }
-  ];
 
   constructor() {
     super();
     this.state = {
-      article: this.article,
+      articles: [],
       loading: false,
     };
   }
+
+  async componentDidMount(){
+    let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=ec9b8633b1634e469b4652cb03570cd2";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    console.log(parsedData)
+    this.setState({
+      articles: parsedData.articles
+    })
+    console.log(this.articles)
+  }
+
   render() {
     return (
       <div className="container my-3">
         <h2>NewsAvs - Top Headlines</h2>
         <div className="row">
-          {this.state.article.map((element) => {
+          {this.state.articles.map((element) => {
             return (
               <div className="col-md-4" key={element.url}>
                 <NewsItem
-                  title={element.title.slice(0,45)}
-                  description={element.description.slice(0,88)}
-                  imageUrl={element.urlToImage}
-                  newsUrl={element.url}
+                  title={element.title?element.title:""}
+                  description={element.description?element.description:""}
+                  imageUrl={element.urlToImage?element.urlToImage:"https://images.indianexpress.com/2022/01/horoscope_2-1200-1-1.jpeg"}
+                  newsUrl={element.url?element.url:""}
                 />
               </div>
             );
