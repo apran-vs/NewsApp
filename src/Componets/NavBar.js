@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 export class Navbar extends Component {
-  static propTypes = {};
 
   render() {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
               NewsAvs
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -29,25 +28,25 @@ export class Navbar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Category
                   </a>
                   <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a className="dropdown-item" href="/">business</a></li>
-                    <li><a className="dropdown-item" href="/">entertainment</a></li>
-                    <li><a className="dropdown-item" href="/">general</a></li>
-                    <li><a className="dropdown-item" href="/">health</a></li>
-                    <li><a className="dropdown-item" href="/">science</a></li>
-                    <li><a className="dropdown-item" href="/">sports</a></li>
-                    <li><a className="dropdown-item" href="/">technology</a></li>
+                    <li><Link className="dropdown-item" to="/">general</Link></li>
+                    <li><Link className="dropdown-item" to="/business">business</Link></li>
+                    <li><Link className="dropdown-item" to="/entertainment">entertainment</Link></li>
+                    <li><Link className="dropdown-item" to="/health">health</Link></li>
+                    <li><Link className="dropdown-item" to="/science">science</Link></li>
+                    <li><Link className="dropdown-item" to="/sports">sports</Link></li>
+                    <li><Link className="dropdown-item" to="/technology">technology</Link></li>
                   </ul>
                 </li>
-                <li className="nav-item"><a className="nav-link" href="/about">About Us</a></li>
+                <li className="nav-item"><Link className="nav-link" to="/">About Us</Link></li>
               </ul>
             </div>
           </div>

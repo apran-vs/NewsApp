@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 
 export class NewsItem extends Component {
 
-  constructor(){
-    super();
-  }
+  // constructor(){
+  //   super();
+  // }
 
   render() {
     let {title, description,imageUrl, newsUrl} = this.props;
     return (
-      <div className="my-3 mx-2">
+      <div className="my-3">
         <div className="card">
           <img src={imageUrl} className="card-img-top" alt="..."/>
           <div className="card-body">
