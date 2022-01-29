@@ -86,6 +86,9 @@ export class News extends Component {
                       : "https://images.indianexpress.com/2022/01/horoscope_2-1200-1-1.jpeg"
                   }
                   newsUrl={element.url ? element.url : ""}
+                  author={element.author?element.author:"Unknown"}
+                  date={element.publishedAt}
+                  source={element.source.name}
                 />
               </div>
             );
