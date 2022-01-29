@@ -14,12 +14,12 @@ export class NewsItem extends Component {
           <img src={imageUrl} className="card-img-top" alt="..."/>
           <div className="card-body">
             <h5 className="card-title">{title} 
-              <span class="position-absolute top-0 end-0 badge bg-info" style={{zIndex:'1'}}>
+              <span className="position-absolute top-0 end-0 badge bg-info">
                 {source}
               </span>
                 </h5>
             <p className="card-text">{description}</p>
-            <p class="card-text"><small class="text-muted">By {author} on {new Date(date).toGMTString()}</small></p>
+            <p className="card-text"><small className="text-muted">By {author} on {new Date(date).toGMTString()}</small></p>
             <a href={newsUrl} target="_blank" rel="noreferrer" className="btn btn-sm btn-dark">Read More</a>
           </div>
         </div>
