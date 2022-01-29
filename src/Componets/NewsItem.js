@@ -14,7 +14,7 @@ export class NewsItem extends Component {
           <img src={imageUrl} className="card-img-top" alt="..."/>
           <div className="card-body">
             <h5 className="card-title">{title} 
-              <span class="position-absolute top-0 translate-middle badge bg-info" style={{zIndex:'1',left:'90%'}}>
+              <span class="position-absolute top-0 end-0 badge bg-info" style={{zIndex:'1'}}>
                 {source}
               </span>
                 </h5>
