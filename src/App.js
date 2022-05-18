@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState } from 'react'
 import NavBar from './Componets/NavBar';
 import News from './Componets/News';
+import AboutUs from './Componets/AboutUs';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,11 +15,6 @@ const App = () => {
   const pageSize = 6;
   const apiKey = process.env.REACT_APP_NEWS_API;
   const [progress, setProgress] = useState(0)
-
-  // setProgress=(progress)=>{
-  //   setState({progress:progress})
-  // }
-
 
   return (
     <div>
@@ -37,6 +33,7 @@ const App = () => {
           <Route exact path="/science" Component="<News/>"><News setProgress={setProgress} apiKey={apiKey} key="science" pageSize={pageSize} country="in" category="science"/></Route>
           <Route exact path="/sports" Component="<News/>"><News setProgress={setProgress} apiKey={apiKey} key="sports" pageSize={pageSize} country="in" category="sports"/></Route>
           <Route exact path="/technology" Component="<News/>"><News setProgress={setProgress} apiKey={apiKey} key="technology" pageSize={pageSize} country="in" category="technology"/></Route>
+          <Route exact path="/AboutUs" Component="<AboutUs/>"><AboutUs/></Route>
         </Switch>
       
     </Router>
